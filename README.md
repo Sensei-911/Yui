@@ -10,6 +10,7 @@ After installation finishes you can use `node shard.js` to start the bot.
 
 # 💻 Installation
 + ![With Github](https://i.hizliresim.com/Sj839P.png)
+
 # ⚙️ Configuration
 Copy or Rename `config.json.example` to `config.json` and fill out the values:
 ⚠️ **Note: Never commit or share your token or api keys publicly **⚠️
@@ -28,6 +29,7 @@ Copy or Rename `config.json.example` to `config.json` and fill out the values:
   "votelink": ""
 }
 ```
+
 # 📝 Credits
 + [@eritislami](https://github.com/eritislami "Click!") music commands
 + [codare](https://discord.com/invite/codare "Click!") some of my commands
