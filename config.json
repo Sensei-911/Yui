@@ -1,7 +1,7 @@
 {
-  "TOKEN": "NzYwMjQ0OTI0MTg4MzI3OTc3.X3JPQg.QJjO3dusKTyxUYdc0Dit85ukxbs",
-  "AUTHOR": "393754881586102282",
-  "YOUTUBE_API_KEY": "AIzaSyDuKfAjqbASJ43lPZdD9NRvbqPM1qqKeac",
+  "TOKEN": "Your Token Goes Here",
+  "AUTHOR": "Your Id Goes Here",
+  "YOUTUBE_API_KEY": "Your Key Goes Here",
   "SOUNDCLOUD_CLIENT_ID": "",
   "MAX_PLAYLIST_SIZE": 10,
   "PREFIX": "ck!",
