@@ -6,7 +6,7 @@ module.exports = {
             useNewUrlParser: true,
         };
 
-        mongoose.connect('mongodb+srv://admin:TCZkxIVHvX2jS1Sd@chika.xbf6o.mongodb.net/guilds?retryWrites=true&w=majority', dbOptions);
+        mongoose.connect('Your connection url goes here', dbOptions);
         mongoose.set('useFindAndModify', false);
         mongoose.Promise = global.Promise;
 
