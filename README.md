@@ -1,4 +1,4 @@
-# Requiremnts
+# Requirements
 
 1. First you need a bot token [Guide](https://discordjs.guide/preparations/setting-up-a-bot-application.html#creating-your-bot "Click!")
 2. Second you need a youtube api key  [Guide](https://developers.google.com/youtube/v3/getting-started "Click!")
