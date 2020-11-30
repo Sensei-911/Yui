@@ -1,3 +1,5 @@
+# ChikaBot
+
 ## 🎶 | Music Commands
 
 **High quality music sit back and enjoy**
