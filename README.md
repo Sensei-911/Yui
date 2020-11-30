@@ -32,44 +32,9 @@ Copy or Rename `config.json.example` to `config.json` and fill out the values:
 + 📝 Features & Commands
 # ChikaBot | A great bot built with JavaScript
 
-## 🎶 | Music Commands
-
 **High quality music sit back and enjoy**
 
 ![Click](https://i.imgur.com/NO5qYmi.png)
-
-## 🥵 | Moderation Commands
-
-![Click](https://i.imgur.com/tWo0Dr9.png)
-![Click](https://i.imgur.com/GunqJaB.png)
-![Click](https://i.imgur.com/qpRknUe.gif)
-
-## 😋 | Gif Commands
-
-![Click](https://i.imgur.com/w8kwqhQ.gif)
-![Click](https://i.imgur.com/39I8kyv.gif)
-![Click](https://i.imgur.com/lWhqYpv.gif)
-
-## 😅 | Fun Commands
-
-![Click](https://i.imgur.com/5GKF1K7.png)
-![Click](https://i.imgur.com/0gx1K82.png)
-![Click](https://i.imgur.com/06ZvLVV.png)
-
-🎮 | Game Commands
--
-![Click](https://i.imgur.com/GuVwiGJ.gif)
-![Click](https://i.imgur.com/03xYi1k.gif)
-
-## ℹ | İnfo Commands
-
-![Click](https://i.imgur.com/U7czP8X.png)
-![Click](https://i.imgur.com/HZV5iOs.png)
-![Click](https://i.imgur.com/PdXi6ho.png)
-
-_Soon there will be nsfw,currency and more commands..._
-
-# All Commands
 
 ### 🎶 | Music Commands
 + **play:** *plays the song you specified*
