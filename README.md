@@ -1,7 +1,7 @@
 # Requiremnts
 
-+ First you need a bot token [Guide](https://discordjs.guide/preparations/setting-up-a-bot-application.html#creating-your-bot "Click!")
-+ Second you need a youtube api key  [Guide](https://developers.google.com/youtube/v3/getting-started "Click!")
-+ + Then create a sound cloud client id (optional) [Guide](https://github.com/zackradisic/node-soundcloud-downloader#client-id "Click!")
-+ Node.js v12.0.0 or newer
+1. First you need a bot token [Guide](https://discordjs.guide/preparations/setting-up-a-bot-application.html#creating-your-bot "Click!")
+2. Second you need a youtube api key  [Guide](https://developers.google.com/youtube/v3/getting-started "Click!")
+3. Then create a sound cloud client id (optional) [Guide](https://github.com/zackradisic/node-soundcloud-downloader#client-id "Click!")
+4. Node.js v12.0.0 or newer
 
