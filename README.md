@@ -14,7 +14,6 @@ Copy or Rename `config.json.example` to `config.json` and fill out the values:
 
 ```js
 {
-{
   "TOKEN": "",
   "AUTHOR": "",
   "YOUTUBE_API_KEY": "",
@@ -26,5 +25,6 @@ Copy or Rename `config.json.example` to `config.json` and fill out the values:
   "invitelink": "",
   "votelink": ""
 }
-}
 ```
+# 📝 Credits
+[@eritislami](https://github.com/eritislami "Click!")
