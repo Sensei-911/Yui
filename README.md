@@ -27,5 +27,5 @@ Copy or Rename `config.json.example` to `config.json` and fill out the values:
 }
 ```
 # 📝 Credits
-+ [@eritislami](https://github.com/eritislami "Click!")
-+ [codare](https://discord.com/invite/codare "Click!")
++ [@eritislami](https://github.com/eritislami "Click!") music commands
++ [codare](https://discord.com/invite/codare "Click!") some of my commands
