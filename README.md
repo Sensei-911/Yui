@@ -85,6 +85,7 @@ Copy or Rename `config.json.example` to `config.json` and fill out the values:
 + **meme:** *sends random memes*
 + **coinflip:** *you flip a coin*
 + **love:** *measures how much someone loves you*
++ **roll:** *you roll the dice*
 
 ### 🎮 | Game Commands
 + **adamasmaca:** *you play 'adamasmaca' game*
