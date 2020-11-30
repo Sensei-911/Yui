@@ -1,4 +1,4 @@
-# ChikaBot
+# ChikaBot | A great bot built with JavaScript
 
 ## 🎶 | Music Commands
 
