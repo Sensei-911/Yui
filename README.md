@@ -1,5 +1,7 @@
 # Requirements
 
+**Important:** My bot is currently in beta and some commands can be not work stable
+
 1. First you need a bot token [Guide](https://discordjs.guide/preparations/setting-up-a-bot-application.html#creating-your-bot "Click!")
 2. Second you need a youtube api key  [Guide](https://developers.google.com/youtube/v3/getting-started "Click!")
 + 2.1 Then create a sound cloud client id **(optional)** [Guide](https://github.com/zackradisic/node-soundcloud-downloader#client-id "Click!")
