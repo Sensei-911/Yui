@@ -15,6 +15,7 @@ After installation finishes you can use `node shard.js` to start the bot.
 
 # ⚙️ Configuration
 Copy or Rename `config.json.example` to `config.json` and fill out the values:
+
 ⚠️ **Note: Never commit or share your token or api keys publicly **⚠️
 
 ```js
