@@ -1,3 +1,9 @@
+/*
+ * Chika Bot for Discord
+ * Copyright (C) 2020 Kemal H.
+ * This software is licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+ * For more information, see README.md and LICENSE
+  */
 const Discord = require('discord.js');
 var images = [
 "https://cdn.zerotwo.dev/CRY/df8f1f99-10bb-4fe0-89c3-1bf66fc51bb8.gif",
