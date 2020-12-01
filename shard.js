@@ -1,3 +1,9 @@
+/*
+ * Chika Bot for Discord
+ * Copyright (C) 2019 Kemal
+ * This software is licensed under MIT
+ * For more information, see README.md and LICENSE
+*/
 const chalk = require('chalk');
 const { ShardingManager } = require('discord.js');
 
