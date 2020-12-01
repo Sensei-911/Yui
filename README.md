@@ -38,7 +38,7 @@ Copy or Rename `config.json.example` to `config.json` and fill out the values:
 
 ![Click](https://i.imgur.com/NO5qYmi.png)
 
-### 🎶 | Music Commands
+### Music Commands
 + **play:** *plays the song you specified*
 + **stop:** *stops the music*
 + **skip:** *skips the music*
@@ -56,7 +56,7 @@ Copy or Rename `config.json.example` to `config.json` and fill out the values:
 + **skipto:** *skip the specified song*
 + **volume:** *change volume*
 
-### 🥵 | Moderation Commands
+### Moderation Commands
 + **ban:** *ban the specified member*
 + **kick:** *kick the specified member*
 + **clear:** *purge messages*
@@ -69,7 +69,7 @@ Copy or Rename `config.json.example` to `config.json` and fill out the values:
 + **lock:** *lock the current channel*
 + **unlock:** *unlock the current channel*
 
-### 😋 | Gif Commands
+### Gif Commands
 + **kiss:** *kiss someone*
 + **hug:** *hug someone*
 + **slap:** *slap someone*
@@ -78,7 +78,7 @@ Copy or Rename `config.json.example` to `config.json` and fill out the values:
 + **sad:** *feel sad*
 + **cry:** *make yourself cry*
 
-### 😅 | Fun Commands
+### Fun Commands
 + **joke:** *sends random jokes*
 + **lenny:** *( ͡° ͜ʖ ͡°)*
 + **owo:** *OwO*
@@ -89,14 +89,14 @@ Copy or Rename `config.json.example` to `config.json` and fill out the values:
 + **love:** *measures how much someone loves you*
 + **roll:** *you roll the dice*
 
-### 🎮 | Game Commands
+### Game Commands
 + **adamasmaca:** *you play 'adamasmaca' game*
 + **guessnumber:** *know up to 100 randomly selected numbers*
 + **fish:** *you catch fish*
 + **slots:** *play slot game*
 + **8ball:** *ask a question to bot*
 
-### ℹ | İnfo Commands
+### İnfo Commands
 + **avatar:** *gives you your avatar*
 + **server:** *gives information about the server you are in*
 + **ping:** *gives bots ping*
@@ -110,13 +110,13 @@ Copy or Rename `config.json.example` to `config.json` and fill out the values:
 + **snipe:** *sends the last deleted message*
 + **translate:** *sends the translate url of your messages*
 
-### 📜 | Text Commands
+### Text Commands
 + **greentext:** *turns your text green*
 + **spoiler:** *throws your text in spoiler*
 + **imagine:** *imagine something*
 + **clap:** *c👏l👏a👏p*
 
-### 📷 | Image Commands
+### Image Commands
 + **banner:** *turns your text to banner*
 
 # 📝 Credits
