@@ -1,7 +1,7 @@
 const chalk = require('chalk');
 const { ShardingManager } = require('discord.js');
 const bumbe = new ShardingManager('./index.js', { 
-totalShards: 3,
+totalShards: 1,
 });
 bumbe.spawn();
 bumbe.on('shardCreate', shard => {
