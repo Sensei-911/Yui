@@ -1,24 +1,16 @@
-/*
- * Chika Bot for Discord
- * Copyright (C) 2020 Kemal H.
- * This software is licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
- * For more information, see README.md and LICENSE
-  */
 const Discord = require("discord.js")
 
 module.exports = {
-    name: 'penis',
-    aliases: ["pp"],
-    description: 'Shows bots ping',
-    execute(client, message, args) {
-var cevaplar = ['','=','==','===','====','=====','======','=======','========','=========','==========','===========','============','=============','==============','==============='];
-var cevap = cevaplar[Math.floor(Math.random() * cevaplar.length)];
-            let penis_embed = new Discord.MessageEmbed()
-            .setTitle("Uzunluk Ölçer")
-            .setDescription(`${message.author.username} kişisinin penisi
-8${cevap}D`)
-            .setColor('RANDOM')
+name: 'penis',
+aliases: ["pp"],
+description: 'Shows your penis size',
+execute(client, message, args) {
+var answers = ['','=','==','===','====','=====','======','=======','========','=========','==========','===========','============','=============','==============','==============='];
+var answer = answers[Math.floor(Math.random() * answers.length)];
+var penis_embed = new Discord.MessageEmbed()
+.setTitle("size machine")
+.setDescription(`${message.author.username}'s penis\n8${answer}D`)
+.setColor('RANDOM')
 message.channel.send(penis_embed);
- }}
 
-
+}}

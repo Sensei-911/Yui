@@ -1,9 +1,3 @@
-/*
- * Chika Bot for Discord
- * Copyright (C) 2020 Kemal H.
- * This software is licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
- * For more information, see README.md and LICENSE
-  */
 const ytdlDiscord = require("ytdl-core-discord");
 const scdl = require("soundcloud-downloader");
 const { canModifyQueue } = require("../utils/Util");
@@ -16,7 +10,7 @@ module.exports = {
     if (!song) {
       queue.channel.leave();
       message.client.queue.delete(message.guild.id);
-      return queue.textChannel.send("🚫 Müzik listesi bitti.").catch(console.error);
+      return queue.textChannel.send("🚫 Music queue ended.").catch(console.error);
     }
 
     let stream = null;
@@ -75,7 +69,7 @@ module.exports = {
     dispatcher.setVolumeLogarithmic(queue.volume / 100);
 
     try {
-      var playingMessage = await queue.textChannel.send(`🎶 Oynamaya Başlandı: **${song.title}** ${song.url}`);
+      var playingMessage = await queue.textChannel.send(`🎶 Started Playing: **${song.title}** ${song.url}`);
       await playingMessage.react("⏭");
       await playingMessage.react("⏯");
       await playingMessage.react("🔇");
@@ -102,7 +96,7 @@ module.exports = {
           reaction.users.remove(user).catch(console.error);
           if (!canModifyQueue(member)) return;
           queue.connection.dispatcher.end();
-          queue.textChannel.send(`${user} ⏩ şarkıyı geçti`).catch(console.error);
+          queue.textChannel.send(`${user} ⏩ skipped the song.`).catch(console.error);
           collector.stop();
           break;
 
@@ -112,11 +106,11 @@ module.exports = {
           if (queue.playing) {
             queue.playing = !queue.playing;
             queue.connection.dispatcher.pause(true);
-            queue.textChannel.send(`${user} ⏸ şarkıyı durdurdu.`).catch(console.error);
+            queue.textChannel.send(`${user} ⏸ paused the music.`).catch(console.error);
           } else {
             queue.playing = !queue.playing;
             queue.connection.dispatcher.resume();
-            queue.textChannel.send(`${user} ▶ şarkıyı başlattı!`).catch(console.error);
+            queue.textChannel.send(`${user} ▶ resumed the music!`).catch(console.error);
           }
           break;
 
@@ -126,11 +120,11 @@ module.exports = {
           if (queue.volume <= 0) {
             queue.volume = 100;
             queue.connection.dispatcher.setVolumeLogarithmic(100 / 100);
-            queue.textChannel.send(`${user} 🔊 şarkının susturmasını kaldırdı!`).catch(console.error);
+            queue.textChannel.send(`${user} 🔊 unmuted the music!`).catch(console.error);
           } else {
             queue.volume = 0;
             queue.connection.dispatcher.setVolumeLogarithmic(0);
-            queue.textChannel.send(`${user} 🔇 şarkıyı susturdu!`).catch(console.error);
+            queue.textChannel.send(`${user} 🔇 muted the music!`).catch(console.error);
           }
           break;
 
@@ -141,7 +135,7 @@ module.exports = {
           else queue.volume = queue.volume - 10;
           queue.connection.dispatcher.setVolumeLogarithmic(queue.volume / 100);
           queue.textChannel
-            .send(`${user} 🔉 sesi kıstı, şu an ses  ${queue.volume}%`)
+            .send(`${user} 🔉 decreased the volume, the volume is now ${queue.volume}%`)
             .catch(console.error);
           break;
 
@@ -152,7 +146,7 @@ module.exports = {
           else queue.volume = queue.volume + 10;
           queue.connection.dispatcher.setVolumeLogarithmic(queue.volume / 100);
           queue.textChannel
-            .send(`${user} 🔊 sesi açtı, şu an ses ${queue.volume}%`)
+            .send(`${user} 🔊 increased the volume, the volume is now ${queue.volume}%`)
             .catch(console.error);
           break;
 
@@ -160,14 +154,14 @@ module.exports = {
           reaction.users.remove(user).catch(console.error);
           if (!canModifyQueue(member)) return;
           queue.loop = !queue.loop;
-          queue.textChannel.send(`Döngü şu an ${queue.loop ? "**açık**" : "**kapalı**"}`).catch(console.error);
+          queue.textChannel.send(`Loop is now ${queue.loop ? "**on**" : "**off**"}`).catch(console.error);
           break;
 
         case "⏹":
           reaction.users.remove(user).catch(console.error);
           if (!canModifyQueue(member)) return;
           queue.songs = [];
-          queue.textChannel.send(`${user} ⏹ şarkıyı durdurdu!`).catch(console.error);
+          queue.textChannel.send(`${user} ⏹ stopped the music!`).catch(console.error);
           try {
             queue.connection.dispatcher.end();
           } catch (error) {

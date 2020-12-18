@@ -14,7 +14,7 @@ module.exports = {
       }
 
       return message.channel
-        .send(`Mesaj kısaltma ${config.PRUNING ? "**açık**" : "**kapalı**"}`)
+        .send(`Mesaj kısaltma ${config.PRUNING ? "**on**" : "**off**"}`)
         .catch(console.error);
-    });
-  }};
+
+})}}

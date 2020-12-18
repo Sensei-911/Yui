@@ -20,5 +20,5 @@ module.exports = {
     queue.connection.dispatcher.setVolumeLogarithmic(args[0] / 100);
 
     return queue.textChannel.send(`Şu an ses: **${args[0]}%**`).catch(console.error);
-  }
-};
+  
+}}

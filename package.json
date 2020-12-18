@@ -1,10 +1,10 @@
 {
-  "name": "chika",
-  "version": "1.0.5",
+  "name": "yui",
+  "version": "1.4.5",
   "description": "Nice Bot",
-  "main": "chika.js",
+  "main": "index.js",
   "scripts": {
-    "test": "node shard.js"
+  "test": "node shard.js"
   },
   "author": "393754881586102282",
   "license": "ISC",
@@ -24,12 +24,13 @@
     "quick.db": "^7.1.3",
     "random-number-csprng": "^1.0.2",
     "request": "^2.88.2",
+    "request-promise-native": "^1.0.9",
     "simple-youtube-api": "^5.2.1",
     "snekfetch": "^4.0.4",
     "soundcloud-downloader": "^0.2.1",
     "string-progressbar": "^1.0.1",
+    "superagent": "^6.1.0",
     "weather-js": "^2.0.0",
-    "ytdl-core": "^4.1.1",
-    "ytdl-core-discord": "^1.2.4"
+    "ytdl-core": "^4.1.2"
   }
 }

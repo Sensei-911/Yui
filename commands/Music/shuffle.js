@@ -5,7 +5,7 @@ module.exports = {
   description: "Listeyi karıştırır",
   execute(client, message) {
     const queue = message.client.queue.get(message.guild.id);
-    if (!queue) return message.channel.send("önce şarkı eklemelisin").catch(console.error);
+    if (!queue) return message.channel.send("there is nothing to shuffle.").catch(console.error);
     if (!canModifyQueue(message.member)) return;
 
     let songs = queue.songs;
@@ -15,6 +15,6 @@ module.exports = {
     }
     queue.songs = songs;
     message.client.queue.set(message.guild.id, queue);
-    queue.textChannel.send(`${message.author} 🔀 listeyi karıştırdı`).catch(console.error);
-  }
-};
+    queue.textChannel.send(`${message.author} 🔀 shuffled the queue.`).catch(console.error);
+
+}}

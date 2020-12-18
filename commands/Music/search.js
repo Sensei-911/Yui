@@ -43,6 +43,5 @@ module.exports = {
     } catch (error) {
       console.error(error);
       message.channel.activeCollector = false;
-    }
-  }
-};
+    
+}}}

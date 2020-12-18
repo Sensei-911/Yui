@@ -4,13 +4,19 @@ const ytdl = require("ytdl-core");
 const YouTubeAPI = require("simple-youtube-api");
 const youtube = new YouTubeAPI(YOUTUBE_API_KEY);
 const scdl = require("soundcloud-downloader");
-
+const Discord = require('discord.js')
 module.exports = {
   name: "play",
   cooldown: 3,
   aliases: ["p"],
   description: "Müzik oynatır",
   async execute(client, message, args) {
+    let return_embed = new Discord.MessageEmbed()
+    .setTitle("Maintenance")
+    .setDescription("There is a problem with this command and soon it will be repaired try an another command :)")
+    .setColor('RANDOM')
+    message.channel.send(return_embed)
+    return 
     const { channel } = message.member.voice;
 
     const serverQueue = message.client.queue.get(message.guild.id);

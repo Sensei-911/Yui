@@ -1,19 +1,19 @@
-/*
- * Chika Bot for Discord
- * Copyright (C) 2020 Kemal H.
- * This software is licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
- * For more information, see README.md and LICENSE
-  */
 module.exports = {
-    name: 'slowmode',
-    cooldown: 5,
-    execute(client, message, args) {
-    if(!message.member.hasPermission("MANAGE_CHANNELS")) return
-    let slow = args[0]
-    //if (slow === 'off') {duration = 0}
-    if (!slow) return message.channel.send("Miktar belirtmediniz!")
-    if (slow > 21600) return message.channel.send("En fazla 6 saat yavaş mod koyabilirsiniz!")
-    if(isNaN(slow)) return message.channel.send(`Bu bir sayı değil!`)
-    
-    message.channel.setRateLimitPerUser(slow).then(message.channel.send(`Yavaş mod ${slow} saniyeye ayarlandı!`))
-  }}
+name: 'slowmode',
+cooldown: 5,
+execute(client, message, args) {
+if(!message.member.hasPermission("MANAGE_CHANNELS")) return
+let slow = args[0]
+if (!slow) return message.channel.send("You did not specify a quantity!")
+if (slow > 21600) return message.channel.send("You can put slowmode for up to 6 hours!")
+if (slow > 0) {
+message.channel.setRateLimitPerUser(slow).then(message.channel.send(`Slow mode enabled. (1 msg/${slow}s)`))
+}
+if (slow < 0) {
+message.channel.send("Are you serious .p") 
+}
+if (slow == 'off') {
+message.channel.setRateLimitPerUser(0).then(message.channel.send(`Slow mode disabled. (1 msg/0s)`))
+}
+
+}}

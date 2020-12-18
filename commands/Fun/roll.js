@@ -1,18 +1,12 @@
-/*
- * Chika Bot for Discord
- * Copyright (C) 2020 Kemal H.
- * This software is licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
- * For more information, see README.md and LICENSE
-  */
 const Discord = require('discord.js');
 const olabilecekler = ['1','2','3','4','5','6']
 const zar_boşluk_emoji = ['<:blank:776723076574347264>']
 
 module.exports = {
-    name: 'roll',
-    aliases: ["zar"],
-    description: 'Zar atarsınız.',
-    execute(client, message, args) {
+name: 'roll',
+aliases: ["zar"],
+description: 'Zar atarsınız.',
+execute(client, message, args) {
 
 var zar = olabilecekler[Math.floor(Math.random() * olabilecekler.length)];
 
