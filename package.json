@@ -1,11 +1,10 @@
 {
   "name": "yui",
   "version": "1.4.5",
-  "description": "",
+  "description": "A discord bot meant to help you find anime girls",
   "main": "yui.js",
   "scripts": {
-    "test": "node ./src/yui.js",
-    "start": "node ./src/mainClass.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
   },
   "author": "sensei",
   "license": "MIT",
