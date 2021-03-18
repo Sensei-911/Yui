@@ -3,7 +3,6 @@ const yui = new Discord.Client({ disableMentions: "everyone"});
 const config = require('./secrets/config.json');
 const secrets = require('./secrets/secrets.json')
 const { Player } = require('discord-player');
-const { Base } = require('eris-sharder')
 const fs = require("fs");
 const AutoPoster = require('topgg-autoposter')
 const poster = AutoPoster(secrets.TOPGG_SECRET, yui)
