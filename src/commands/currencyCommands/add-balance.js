@@ -2,6 +2,7 @@ const economy = require('../../utils/dbFunctions')
 
 module.exports = {
 name: 'add-balance',
+ownerOnly:true,
 async execute(yui, message, args) {
 
 const mention = message.mentions.users.first()
