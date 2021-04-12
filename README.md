@@ -14,7 +14,7 @@ As long as you follow the license, we don't care if you host your own version of
 
 Yeap, there is no other owner i coded everything alone :(
 
-# License
+## License
 
 This project is licensed under the GNU AGPLv3 License - see the LICENSE.md file for exact details
 
