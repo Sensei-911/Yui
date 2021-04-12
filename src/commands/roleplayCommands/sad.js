@@ -1,7 +1,9 @@
 module.exports = {
 name: 'sad',
-async execute(yui, message, args) {
-const json = require('./images.json')
-const image = json.sad[Math.floor(Math.random() * json.sad.length)]
-message.channel.send({ embed: { author: { name:`${message.author.username} is sad :c`, icon_url: message.author.displayAvatarURL({ dynamic: true, size: 1024 }), url: image }, color: '#00FFFF', image: {url: image }}});
+cooldown: 2,
+permissions: ["sendMessages", "embedLinks"],
+async execute(Yui, message, args) {
+const misc = require('../../utils/misc.js')
+const image = await misc.jsonData('../assets/json/roleplay.json', 'sad')
+message.channel.createMessage({ embed: { author: { name:`${message.author.username} is sad`, icon_url: message.author.avatarURL, url: image }, color: 0x0ffff, image: {url: image }}});
 }}

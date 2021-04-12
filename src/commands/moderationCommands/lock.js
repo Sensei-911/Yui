@@ -1,17 +1,20 @@
 module.exports = {
 name: "lock",
-description: "Etiketlenen kişinin ismini değiştirir",
-execute(yui, message, args) {
-if(!message.member.hasPermission('MANAGE_CHANNELS')) return;
-let channel = message.mentions.channels.first() || message.channel;
-let reason;
-if(!message.mentions.channels.first()) {if(args[0]) reason = args.slice(0).join(' ')}
-if(message.mentions.channels.first()) {if(args[1]) reason = args.slice(1).join(' ')}
-let reasonn;
-if(!reason) reasonn = '. No reason given.';
-if(reason) reasonn = ` for ${reason} reason.`;
-let everyone = message.guild.roles.cache.find(a => a.name === '@everyone');
-channel.updateOverwrite(everyone, { 'SEND_MESSAGES': false }, `Locked by ${message.author.tag}`)
-channel.send({ embed: { title: `${channel.name} has been Locked.`, description:`Unfortunately, mods had to lock this channel${reasonn} Please respect this decision and it MAY be reopened in the future.`,color: 'RED'}})
-    
+memberPermissions: ['manageChannels'],
+recovery: false,
+async execute(Yui, message, args) {
+const channel = message.channelMentions[0] || message.channel;
+if (!channel) return message.channel.createMessage(`Please specify a channel!`)
+let reason = args.slice(0).join(' ')
+if(!reason) reason = 'No reason given.';
+
+let previousOverwrites = channel.permissionOverwrites.has(message.channel.guild.id) ? channel.permissionOverwrites.get(message.channel.guild.id) : { json: {}, allow: 0, deny: 0 };
+if (previousOverwrites.json.sendMessages === false) {
+message.channel.createMessage('this channel is already locked ya doofus');
+return
+}
+channel.editPermission(message.channel.guild.id, previousOverwrites.allow | 2048, previousOverwrites.deny | 2048, 'role', reason)
+
+channel.createMessage(`<:greentick:829278953168044052> Locked down **${channel.name}.**`)
+
 }}

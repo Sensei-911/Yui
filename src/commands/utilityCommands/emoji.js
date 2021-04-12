@@ -1,15 +1,20 @@
 module.exports = {
 name: 'emoji',
-description: 'Gives emojis url',
-async execute(yui, message, args) {
-if(!args[0])return message.channel.send('You dont specify a emoji');
-const Discord = require('discord.js')
-const emoji = Discord.Util.parseEmoji(args[0]);
-if(!emoji || !emoji.id) return message.channel.send('There is no emoji')
-var type;
-if (emoji.animated) type = 'gif'
-if(!emoji.animated) type = 'png'
+cooldown: 2,
+permissions: ["sendMessages", "embedLinks"],
+execute(Yui, message, args) {
+if(!args[0]) {
+message.channel.createMessage('Please specify an emoji...');
+return;
+}
+const Find = require('discord.js')
+const emoji = Find.Util.parseEmoji(args[0]);
+if(!emoji || !emoji.id) {
+message.channel.createMessage('There is no emoji')
+return;
+}
+if (emoji.animated) var type = 'gif'
+if(!emoji.animated) var type = 'png'
 const emoji_url = (`https://cdn.discordapp.com/emojis/${emoji.id}.${type}?v=1`)
-message.channel.send({ embed: { description: `\`${emoji.name}\` \`${emoji.id}\``, color: '#00FFFF', image: { url: emoji_url }}});
-
+message.channel.createMessage({ embed: { color: 0x0ffff, image: { url: emoji_url } }});
 }};

@@ -1,0 +1,17 @@
+{
+
+"token": "",
+"author": "",
+"prefix": "",
+
+"MONGOOSE_PASS": "",
+"TOPGG_SECRET": "",
+"KSOFT_API_KEY": "",
+"GIPHY_API_KEY": "",
+
+"webhookClient1": { "ID": "", "PASS": ""},
+"webhookClient2": { "ID": "", "PASS": ""},
+
+"colors": { "red":   "0xff0000", "green": "0x66ff00", "cyan":  "0x0ffff", "yellow": "0xffff00" }
+
+}

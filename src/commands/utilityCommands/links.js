@@ -1,9 +1,8 @@
 module.exports = {
 name: 'links',
-description: 'Get an invite for the bot or to the support server. Also some extra links to use.',
-cooldown: 1,
+cooldown: 2,
+permissions: ["sendMessages", "embedLinks"],
 aliases: ['invite','support','server'],
-execute(yui, message, args) {
-message.channel.send({embed: { color: '#00FFFF', fields: {name:'Links',value:'[Invıte](https://discord.com/oauth2/authorize?client_id=760244924188327977&scope=bot&permissions=2146954743) | [Support Server](https://discord.com/invite/pVAQPq79uQ) | [Website](https://yuibot.icu)'}
-}})
+execute(Yui, message, args) {
+message.channel.createMessage({ embed: { color: 0x0ffff, description:'[Invıte](https://discord.com/oauth2/authorize?client_id=760244924188327977&scope=bot&permissions=2146954743) | [Support Server](https://discord.com/invite/pVAQPq79uQ) | [Website](https://yuibot.icu)'} })
 }}

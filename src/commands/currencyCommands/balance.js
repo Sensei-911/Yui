@@ -1,15 +1,13 @@
-const economy = require('../../utils/dbFunctions')
-
 module.exports = {
 name: 'balance',
+cooldown: 3,
+permissions:["sendMessages", "embedLinks"],
 aliases: ['cash','money','bal'],
-async execute(yui, message, args) {
+async execute(Yui, message, args) {
 
-const target = message.mentions.users.first() || message.author
-const msg = { guildId: message.guild.id, userId: target.id }
-const coins = await economy.getCoins(msg.guildId, msg.userId)
+const target = message.mentions[0] || message.author
+const coins = await Yui.db.getCoins(target.id)
 
-if(target.bot) return message.channel.send(`Bots can't have coins`)
-message.channel.send(`💰 | **${target.username}**, you currently have **__${coins} coins__!**`)
+message.channel.createMessage({ embed: { description: `${target.mention} has ${coins.toLocaleString()} coins!`, color: 0x0ffff} })
 
 }}

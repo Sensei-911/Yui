@@ -1,10 +1,9 @@
-const client = require('nekos.life');
-const { nsfw } = new client();
 module.exports = {
 name: 'anal',
-description: 'Sends random anal pictures.',
-async execute(yui, message, args) {
-if(message.channel.nsfw === false) return message.channel.send({embed: { title:'NSFW not allowed here', description:'Use NSFW commands in a NSFW marked channel!', image: { url:'https://i.imgur.com/oe4iK5i.gif'}, color:'RANDOM'}})
-const anal = await nsfw.anal()
-message.channel.send({embed: { title: 'Here, take some anal.', color: 'RED', image: { url: anal.url }, footer: { text: `Requested by ${message.author.tag}`}, timestamp: new Date()}})
+isNSFW: true,
+permissions: ["sendMessages", "embedLinks"],
+async execute(Yui, message, args) {
+const fetch = require('node-fetch')
+const json = await fetch('https://nekos.life/api/v2/img/anal').then(response => response.json())
+message.channel.createMessage({ embed: { color: 0x0ffff, image: { url: json.url }, footer: { text: `Requested by ${message.author.username}#${message.author.discriminator}`}, timestamp: new Date()}})
 }}

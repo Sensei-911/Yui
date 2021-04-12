@@ -1,9 +1,10 @@
 module.exports = {
 name: 'dog',
-async execute(yui, message, args) {    
+permissions: ["sendMessages", "embedLinks"],
+cooldown: 3,
+async execute(Yui, message, args) {    
 const { KSoftClient } = require('@ksoft/api');
-const secrets = require('../../secrets/secrets.json')
-const ksoft = new KSoftClient(secrets.KSOFT_API_KEY);
+const ksoft = new KSoftClient(require('../../config.json').KSOFT_API_KEY);
 const dog = await ksoft.images.random('dog');
-message.channel.send({ embed: { author: { name:'Bork Bork! 🐶', url: dog.url}, image:{ url: dog.url}, color: 'RANDOM'}}); 
+message.channel.createMessage({ embed: { author: { name: 'Bork Bork! 🐶', url: dog.url}, image: { url: dog.url}, color: 0x0ffff }}); 
 }}
