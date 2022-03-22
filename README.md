@@ -16,8 +16,4 @@ As long as you follow the license, we don't care if you host your own version of
 
 **Sensei** - Coded everything - [Github Profile](https://github.com/Sensei-911)
 
-Yeap, there is no other owner i coded everything alone :(
-
-## License
-
-This project is licensed under the GNU AGPLv3 License - see the [LICENSE.md](https://github.com/Sensei-911/Discord_Yui_Bot/blob/master/LICENSE) file for exact details.
+Yeap, there is no other owner i coded everything alone.
