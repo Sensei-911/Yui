@@ -2,6 +2,10 @@
 
 Yui, a discord bot made with node.js and discord.js.
 
+## Services
+
+Yui is not actively serving in Discord since 29/03/2022.
+
 ## Self hosting the bot
 
 I do not support or encourage self hosting of this bot. The code is here for learning and transparency purposes.
