@@ -1,0 +1,19 @@
+{
+    "token": "",
+    "author": "393754881586102282",
+    "prefix": "yui",
+
+    "MONGOOSE_PASS": "",
+    "TOPGG_SECRET": "",
+    "KSOFT_API_KEY": "",
+    "GIPHY_API_KEY": "",
+
+    "webhookClient1": {
+        "ID": "",
+        "PASS": ""
+    },
+    "webhookClient2": {
+        "ID": "",
+        "PASS": ""
+    }
+}

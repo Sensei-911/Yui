@@ -1,50 +1,54 @@
 const Eris = require('eris')
-const config = require('./config.json');
+const config = require('../config.json')
 const MessageCollector = require('./utils/MessageCollector.js')
+const logger = require('./utils/logger.js')
 
 const Yui = new Eris.Client(config.token, {
-debug: true,
-restMode: true, 
-allowedMentions: { everyone: false, roles: false, users: true },
-autoreconnect: true,
-defaultImageSize: 1024, 
-disableEveryone: true,
-messageLimit: 0,
-requestTimeout: 0,
-
-disableEvents:{
-TYPING_START:true,
-VOICE_SERVER_UPDATE:true,
-VOICE_STATE_UPDATE:true,
-USER_NOTE_UPDATE:true,
-CHANNEL_PINS_UPDATE:true,
-MESSAGE_UPDATE:true,
-RELATIONSHIP_ADD:true,
-RELATIONSHIP_REMOVE:true
-}
-
+    debug: true,
+    restMode: true,
+    allowedMentions: {
+        everyone: false,
+        roles: false,
+        users: true
+    },
+    autoreconnect: true,
+    defaultImageSize: 1024,
+    disableEveryone: true,
+    messageLimit: 0
 })
 
-Yui.commands = new Eris.Collection();
-Yui.db = require('./utils/dbFunctions.js')
-Yui.http = require('./utils/http.js')
+Yui.commands = new Eris.Collection()
+Yui.db = require('./utils/dbFunctions')(Yui)
+Yui.misc = require('./utils/misc'), (Yui)
+Yui.http = require('./utils/http')
 Yui.MessageCollector = new MessageCollector(Yui)
-process.setMaxListeners(0);
 
-const AutoPoster = require('topgg-autoposter')
-AutoPoster(config.TOPGG_SECRET, Yui)
+try {
+    const AutoPoster = require('topgg-autoposter')
+    setInterval(() => AutoPoster(config.TOPGG_SECRET, Yui), 3600000 * 6)
+} catch (e) {}
 
-const { readdirSync } = require("fs");
+const { readdirSync } = require('fs')
+const handlers = []
+const categories = {}
 
-require('./handlers/eventHandler.js')(Yui)
-require('./handlers/msgHandler.js')(Yui)
+readdirSync('./src/handlers').forEach(dir => handlers.push(dir))
+
+handlers.forEach(handler => {
+    require(`./handlers/${handler}`)(Yui)
+})
 
 readdirSync('./src/commands').forEach(dir => {
-const commandFiles = readdirSync(`./src/commands/${dir}/`).filter((file) => file.endsWith(".js"));
-for (const file of commandFiles) {
-const command = require(`./commands/${dir}/${file}`);
-Yui.commands.set(command.name, command)
+    const commandFiles = readdirSync(`./src/commands/${dir}`).filter((file) => file.endsWith('.js'))
+    for (const file of commandFiles) {
+        Object.assign(categories, {
+            [dir]: commandFiles
+        })
+        const command = require(`./commands/${dir}/${file}`)
+        Yui.commands.set(command.name, command)
+    }
+})
 
-}})
-
-Yui.connect();
+process.on('unhandledRejection', rejection => logger.error('unhandledRejection', rejection))
+Yui.categories = [categories], (Yui)
+Yui.connect()
