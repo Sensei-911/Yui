@@ -1,6 +1,6 @@
 ![Yui](https://i.imgur.com/WasjFzU.jpg)
 
-Yui, a discord bot made with node.js and discord.js.
+Yui, a discord bot made with node.js and eris!
 
 ## Services
 
