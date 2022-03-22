@@ -5,6 +5,7 @@ Yui, a discord bot made with node.js and eris!
 ## Services
 
 Yui is not actively serving in Discord since 29/03/2022.
+There won't be any more updates to this repository.
 
 ## Self hosting the bot
 
