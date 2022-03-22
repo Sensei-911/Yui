@@ -11,4 +11,4 @@ There won't be any more updates to this repository.
 
 I do not support or encourage self hosting of this bot. The code is here for learning and transparency purposes.
 
-As long as you follow the license, i don't care if you host your own version of Yui. However, i will not be taking the time to help set it up.
+As long as you follow the license, whatever you do i don't care. However, i do not take any responsibility.
