@@ -9,4 +9,4 @@ There won't be any more updates to this repository.
 
 ## License
 
-As long as you follow the license, whatever you do i don't care. However, i do not take any responsibility.
+As long as you follow the license, whatever you do I do not care. However, I do not take any responsibility.
